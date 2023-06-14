@@ -60,6 +60,10 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
                 {facade.loggedIn() && facade.readJwtToken(facade.getToken()).roles.includes("admin") &&
                     <a className="nav-item nav-link" href="/admin">Admin</a>
                 }
+                {/*Navbar link, der kun bliver vist for login, med rollen admin*/}
+                {facade.loggedIn() && facade.readJwtToken(facade.getToken()).roles.includes("admin") &&
+                    <a className="nav-item nav-link" href="/admin">Admin_Concert</a>
+                }
 
                 {/*Navbar element, der opdeler Navbaren mellem normale links og login formularen*/}
                 <div className="Nav-right">
